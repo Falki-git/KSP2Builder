@@ -11,6 +11,10 @@ runs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         
+      - name: Test
+        shell: bash
+        run: ls -la
+        
       - name: Download Skeleton DLL
         shell: bash
         run: curl -o "./external_dlls/Assembly-CSharp.dll" "https://vortan.dev/ksp/spacewarp/DummyAssembly.dll"
