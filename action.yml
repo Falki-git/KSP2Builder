@@ -13,5 +13,5 @@ runs:
         
       - name: Download Skeleton DLL
         shell: bash
-        uses: curl -o "./external_dlls/Assembly-CSharp.dll" "https://vortan.dev/ksp/spacewarp/DummyAssembly.dll"
+        run: curl -o "./external_dlls/Assembly-CSharp.dll" "https://vortan.dev/ksp/spacewarp/DummyAssembly.dll"
       
