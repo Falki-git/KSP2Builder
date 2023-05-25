@@ -27,7 +27,7 @@ runs:
         
       - name: Download Python Script
         shell: bash
-        run: curl -o "./" "https://vortan.dev/ksp/spacewarp/runner.py"
+        run: curl "https://vortan.dev/ksp/spacewarp/runner.py"
         
       - name: Run Python Script
         shell: bash
