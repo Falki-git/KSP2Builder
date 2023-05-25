@@ -11,6 +11,12 @@ runs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          architecture: 'x64'
+        
       - name: Make external_dlls
         shell: bash
         run: mkdir ./external_dlls
@@ -19,7 +25,11 @@ runs:
         shell: bash
         run: curl -o "./external_dlls/Assembly-CSharp.dll" "https://vortan.dev/ksp/spacewarp/DummyAssembly.dll"
         
-      - name: Download Skeleton DLL
+      - name: Download Python Script
         shell: bash
-        run: dotnet build
+        run: curl -o "./" "https://vortan.dev/ksp/spacewarp/runner.py"
+        
+      - name: Run Python Script
+        shell: bash
+        run: python runner.py
       
