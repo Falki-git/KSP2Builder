@@ -32,4 +32,7 @@ runs:
       - name: Run Python Script
         shell: bash
         run: python "./runner.py"
-      
+        
+      - name: Build Project
+        shell: bash
+        run: dotnet build     
