@@ -19,7 +19,7 @@ runs:
         
       - name: Make external_dlls
         shell: bash
-        run: mkdir ./external_dlls
+        run: mkdir -p ./external_dlls
         
       - name: Download Skeleton DLL
         shell: bash
