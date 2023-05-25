@@ -1,0 +1,16 @@
+name: KSP2 Builder
+description: 'An automated builder for KSP2 mods, that uses a skeleton dll.'
+author: 'Sinon'
+
+icon: check-square
+color: yellow
+
+runs: 
+  using: composite
+  steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Download Skeleton DLL
+        users: wget -o "./external_dlls" https://vortan.dev/ksp/spacewarp/DummyAssembly.dll
+      
