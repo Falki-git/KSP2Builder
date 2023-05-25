@@ -33,6 +33,10 @@ runs:
         shell: bash
         run: python "./runner.py"
         
+      - name: Clean up
+        shell: bash
+        run: curl -o "./NuGet.Config" "https://vortan.dev/ksp/spacewarp/NuGet.Config"
+        
       - name: Build Project
         shell: bash
         run: dotnet build     
