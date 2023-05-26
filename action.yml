@@ -17,14 +17,6 @@ runs:
           python-version: '3.9'
           architecture: 'x64'
         
-      - name: Make external_dlls
-        shell: bash
-        run: mkdir -p ./external_dlls
-        
-      - name: Download Skeleton DLL
-        shell: bash
-        run: curl -o "./external_dlls/Assembly-CSharp.dll" "https://vortan.dev/ksp/spacewarp/DummyAssembly.dll"
-        
       - name: Download Python Script
         shell: bash
         run: curl -o "./runner.py" "https://vortan.dev/ksp/spacewarp/runner.py"
