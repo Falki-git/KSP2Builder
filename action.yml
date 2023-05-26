@@ -17,14 +17,6 @@ runs:
           python-version: '3.9'
           architecture: 'x64'
         
-      - name: Download Python Script
-        shell: bash
-        run: curl -o "./runner.py" "https://vortan.dev/ksp/spacewarp/runner.py"
-        
-      - name: Run Python Script
-        shell: bash
-        run: python "./runner.py"
-        
       - name: Build Project
         shell: bash
         run: dotnet build     
