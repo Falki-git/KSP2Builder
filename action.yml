@@ -16,6 +16,10 @@ runs:
         with:
           python-version: '3.9'
           architecture: 'x64'
+          
+      - name: Install Tools 
+        shell: bash
+        run: dotnet tool restore
         
       - name: Build Project
         shell: bash
