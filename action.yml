@@ -23,4 +23,4 @@ runs:
         
       - name: Build Project
         shell: bash
-        run: dotnet build -c Release
+        run: dotnet build -c Deploy
